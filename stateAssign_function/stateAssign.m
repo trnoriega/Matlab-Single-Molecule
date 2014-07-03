@@ -26,8 +26,8 @@ function [newData eventData eventSequences] = stateAssign(data, settings)
 % function. The fields are:
 %     -traceColors: RGB matrix. Each row has RGB specifiers for how each color should be plotted
 %     -resumeFlag: 0 or 1. If 0 function starts without loading any previous state assignmets. If 1 function will load previous assignments stored in resumeFile
-%     -numClasses: Interger. Specifies number of different assignment classes
-%     -numColors: Interger. Specifies number of different colors per trace
+%     -numClasses: Integer. Specifies number of different assignment classes
+%     -numColors: Integer. Specifies number of different colors per trace
 %     -classColors: RGB matrix. Each row has RGB specifiers for how each class assignment should be plotted
 %     -resumeFile: String. Name of file where temporary assignments are made when function is stopped before all traces are analyzed. 
 %
@@ -343,8 +343,8 @@ function [HMMseqP STATES sMean stateNum] = stateMaker(numClasses, nFrames, trace
 %
 % INPUTS:
 %
-% -numClasses: Interger. Specifies number of different assignment classes
-% -nFrames: Interger. Number of frames in data for which the structures are
+% -numClasses: Integer. Specifies number of different assignment classes
+% -nFrames: Integer. Number of frames in data for which the structures are
 % being made
 % -traces: Number of traces that will be assigned
 %
@@ -356,7 +356,7 @@ function [HMMseqP STATES sMean stateNum] = stateMaker(numClasses, nFrames, trace
 % in each class.
 % -sMean: Cell. Determines values graphed for each state within assignement
 % class.
-% -stateNum: Interger. Number of states to be assigned per class (9 is max
+% -stateNum: Integer. Number of states to be assigned per class (9 is max
 % and default, one state for each digit with 1 as NO STATE).
 
 stateNum = 9;
@@ -386,9 +386,9 @@ function colorTraces = colorTracesMaker(ttotal, nFrames, traces, numColors)
 %
 % -ttotal: Array. Derived from dataChar function. Standard data format
 % except with t vector prefix removed.
-% -nFrames: Interger. Number of frames per frame.
-% -traces: Interger. Number of traces in data.
-% -numColors: Interger. Number of colors per trace. 
+% -nFrames: Integer. Number of frames per frame.
+% -traces: Integer. Number of traces in data.
+% -numColors: Integer. Number of colors per trace. 
 %
 % OUTPUT:
 %
@@ -412,7 +412,7 @@ function rainbowTitle = rainbowTitleMaker(string, numColors, RGBcolor)
 % INPUTS:
 %
 % -string: String. Specifies the string to be repeated and colored.
-% -numColors: Interger. Number of times the string should be repeated in
+% -numColors: Integer. Number of times the string should be repeated in
 % different colors.
 % -RGBcolor: RGB array. Each row is an RGB specifier for what color each
 % repeated string should be. 
@@ -463,7 +463,7 @@ function colorTraces = totalBacker(backRegion, currentTraces, colorTraces, color
 % -currentTraces: Array. Traces to be modified.
 % -colorTraces: Array: Source of traces to be modified, and ultimately
 % where the changes need to be stored. 
-% -colorPick: Interger or NaN. If set to NaN, the function will apply changes to all traces in currentTraces, 
+% -colorPick: Integer or NaN. If set to NaN, the function will apply changes to all traces in currentTraces, 
 % otherwise changes will only be applied to the current colorPick trace.
 % -n: Reflects trace being analyzed in plotting loop 
 % -t: time vector of data. 
