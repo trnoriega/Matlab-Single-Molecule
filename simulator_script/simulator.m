@@ -2,7 +2,7 @@
 % simulate SRP binding to ribosomes under single molecule conditions.
 % The theory behind the script can be found in this reference:
 % Gillespie, D. T. (2007). Stochastic Simulation of Chemical Kinetics. 
-% Annual Review of Physical Chemistry, 58(1), 35?55.
+% Annual Review of Physical Chemistry, 58(1), 35-55.
 
 %% Description of the Reactions and their associated rates:
 
